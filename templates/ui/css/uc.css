@@ -1,0 +1,42 @@
+.breadcrumbrow{
+	margin-top: 30px;
+}
+.top-content{
+	background-color: #EEEEEE;
+	height: 100px;
+	padding-top:10px;
+	margin-bottom: 20px;
+}
+.top-content .info{
+	margin-left: 10px;
+}
+.top-content .info h2{
+	font-size: 18px;
+	font-weight: bold;
+	color: black;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.menu{
+	background-color: #EEEEEE;
+}
+.shopmenu .menu .food{
+	height: 200px;
+	background-color: white;
+	padding: 8px 15px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	margin-bottom: 20px;
+	text-align: center;
+
+}
+.shopmenu .menu .food .addcart{
+	color: orange;
+}
+.shopmenu .menu img{
+	height: 150px;
+	width: 150px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}

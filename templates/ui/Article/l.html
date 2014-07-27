@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+
+<head>
+	<meta charset="utf-8" />
+	<title>{$aitem.aname}_{$name}</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+	
+	<!--引入Buttons按钮样式 与bootstrap核心css有冲突-->
+<link href="http://cdn.bootcss.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="__ROOT__/templates/new/bootstrap32/css/buttons.css">
+
+<!--引入bootstrap核心css-->
+<link href="__ROOT__/templates/new/bootstrap32/css/bootstrap.min.css" rel="stylesheet">
+<!-- Loading Flat UI -->
+<link href="__ROOT__/templates/new/css/flat-ui.css" rel="stylesheet">
+<!--自定义css-->
+<link href="__ROOT__/templates/new/css/head.css" rel="stylesheet">
+<!--nav css-->
+<link type="text/css" rel="stylesheet" href="__ROOT__/templates/new/css/tmall-nav.css" />
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+	<script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+	
+</head>
+<!-- BEGIN BODY -->
+<body>
+
+<!-- BEGIN nav -->
+	 <include file="Public:header" />
+<!-- end nav -->
+
+<!-- begin container -->
+
+<div class=" container " style="margin-top:5px;">
+
+<div class="panel panel-default" style="min-height:600px">
+  <div class="panel-body">
+  <ol class="breadcrumb">
+  <li><a href="/"><span class="glyphicon glyphicon-home"> 首页</span></a></li>
+  <li>帮助中心</li>
+
+</ol>
+
+<div class="row" >
+     <div class=" col-lg-2 col-md-2 col-xs-12" >
+	
+	<div class="list-group" >
+<volist name="articlelist" id="vo">
+  <a href="{:U('Article/l/','id='.$vo['acid'])}" class="list-group-item list-border">
+    {$vo.aname}
+  </a>
+</volist>
+</div>
+
+	
+	 </div>
+	  <div class="col-lg-10 col-md-10 col-xs-12" style="background-color: #FFF;">
+	  
+        
+
+
+
+  <ul class="nav nav-tabs " >
+             
+			 <li class="active"><a href="#" ><b>{$aitem.aname}</b></a></li>
+          
+          </ul>
+		  <p></P>
+	<ol class="ocss">	  
+    <volist name="list" id="vo" >
+	<li><p><span class="glyphicon glyphicon-tag"></span><a href="{:U('Article/s/','id='.$vo['aid'])}" title="{$vo.atitle}">{$vo.atitle}</a></p></li>
+	</volist>
+	</ol>
+
+<div class="row">  
+    <div class="col-md-4"> </div>
+	<div class="col-md-3"> </div>
+	<div class="col-md-5"> <ul class="pagination">
+							    {$page}
+                                
+                             </ul></div>
+
+</div>
+			  
+  
+	
+	 </div><!-- col end -->
+
+</div><!-- end row -->
+
+
+  
+</div></div>
+
+    
+</div><!-- end container -->
+
+
+
+
+	<include file="Public:foot" />			
+				
+
+
+</body>
+<!-- END BODY -->
+</html>
