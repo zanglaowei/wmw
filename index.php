@@ -1,4 +1,5 @@
 <?php
+// 测试
 //单入口模式
 define('THINK_PATH', './inc/');//thinkphp所在目录
 define('APP_NAME', 'web');//应用名称
